@@ -9,8 +9,7 @@ using namespace std;
 int main()
 {
 	char operation;
-	double a;
-	double b;
+	double a, b, result;
 
 	cout << "What arithmethic operation would you like to perform" << endl;
 	cout << "Enter 'a' for addition\n";
@@ -18,21 +17,35 @@ int main()
 	cout << "'d' for division\n";
 	cout << "'m' for multiplication\n";
 	cin >> operation;
-	if (operation = 'd')
+	if (operation == 'd')
 	{
 		cout << "Enter numerator\n";
 		cin >> a;
 		cout << "Enter denominator\n";
 		cin >> b;
-		cout << a + "divided by" + b + " = "<< divide(a, b) << endl;
+		result = a / b;
 	}
-	else
+	else if (operation != 'd')
 	{
 		cout << "Enter first number\n";
 		cin >> a;
 		cout << "Enter second number\n";
 		cin >> b;
+		if (operation == 'a')
+		{
+			result = a + b;
+		}
+		if (operation == 's')
+		{
+			result = a - b;
+		}
+		if (operation == 'm')
+		{
+			result = a * b;
+		}
 	}
+
+	cout << "Result = " << result << endl;
 	return 0;
 }
 

@@ -29,20 +29,21 @@ Here:
 	{
 		if (guess < rand_num)
 		{
-			cout << "Your guess is too low :(" << endl;
-			cout << "Try again\n";
+			cout << "Olodo rabata :| Your guess is too low :(" << endl;
+			cout << "Try again joor\n";
 		}
 		else
 		{
-			cout << "Your guess is too high :(" << endl;
-			cout << "Try again\n";
+			cout << "Olodo rabata :| Your guess is too high :(" << endl;
+			cout << "Try again joor\n";
 		}
 		goto Here;
 	}
 	else
 	{
-		cout << "Your guess is right :)!!!" << endl;
-		cout << "You are the best\n";
+		//cout << "Your guess is right :)!!!" << endl;
+		//cout << "You are the best\n";
+		cout << "Oya chop nuckle, you get am :)\n";
 	}
 
 	return 0;
