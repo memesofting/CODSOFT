@@ -21,7 +21,8 @@ int main()
 	srand(time(0));
 Here:
 	rand_num = (rand() % (max - min + 1)) + min;
-	cout << "Guess the number";
+	cout << "Hello !!!, it's guessing time !!! :)\n";
+	cout << "Guess the number from 0 - 9 ";
 	//cout << rand_num;
 	cin >> guess;
 	//cout << endl;

@@ -21,19 +21,36 @@ Here:
 
 	if (operation == 'a')
 	{
+		//cout << "Enter first number\n";
+		//cin >> a;
+		//cout << "Enter second number\n";
+		//cin >> b;
+		//result = a + b;
 		result = add(a, b);
 	}
 	else if (operation == 's')
 	{
-		result = sub(a, b);
+		cout << "Enter first number\n";
+		cin >> a;
+		cout << "Enter second number\n";
+		cin >> b;
+		result = a - b;
 	}
 	else if (operation == 'm')
 	{
-		result = mul(a, b);
+		cout << "Enter first number\n";
+		cin >> a;
+		cout << "Enter second number\n";
+		cin >> b;
+		result = a * b;
 	}
 	else if (operation == 'd')
 	{
-		result = divide(a, b);
+		cout << "Enter numerator\n";
+		cin >> a;
+		cout << "Enter denominator\n";
+		cin >> b;
+		result = a / b;
 	}
 	else
 	{
@@ -58,7 +75,7 @@ int add(int x, int y)
 	return result;
 }
 
-int sub(int x, int y)
+void sub(int x, int y)
 {
 	int result;
 
@@ -70,7 +87,7 @@ int sub(int x, int y)
 	return result;
 }
 
-int mul(int x, int y)
+void mul(int x, int y)
 {
 	int result;
 	cout << "Enter first number\n";
@@ -81,7 +98,7 @@ int mul(int x, int y)
 	return result;
 }
 
-double divide(double x, double y)
+void divide(double x, double y)
 {
 	double result;
 	cout << "Enter numerator\n";
