@@ -1,9 +1,16 @@
 #include <iostream>
 
+/**
+ * main - Entry point fir tax calculator
+ *
+ * Return: 0 on success
+ */
+
 using namespace std;
 
 int main()
 {
+	cout << "This program calculates state and county taxes in dollars\n";
 	double sales = 95000;
 	double state_tax_rate = 0.04;
 	double county_tax_rate = 0.02;

@@ -35,13 +35,18 @@ int main()
 		{
 			result = a + b;
 		}
-		if (operation == 's')
+		else if (operation == 's')
 		{
 			result = a - b;
 		}
-		if (operation == 'm')
+		else if (operation == 'm')
 		{
 			result = a * b;
+		}
+		else
+		{
+			cout << "invalid entry\n";
+			cout << "enter 'a', 's' or 'm'\n";
 		}
 	}
 
