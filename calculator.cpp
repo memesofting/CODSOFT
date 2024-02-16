@@ -1,7 +1,10 @@
 #include <iostream>
 #include "main.h"
 /**
- * main: entry point for simple calculator
+ * main - entry point for simple calculator
+ * takes two numbers and askes user for operation to be done
+ * displays result to stdout
+ *
  * Return: 0 on success
  */
 using namespace std;
@@ -46,6 +49,12 @@ Here:
 	return 0;
 }
 
+/**
+ * add - adds two numbers
+ * @x: first number
+ * @y: second number
+ * Return: result on success
+ */
 int add(int x, int y)
 {
 	int result;
@@ -58,6 +67,12 @@ int add(int x, int y)
 	return result;
 }
 
+/**
+ * sub - performs substraction on two numbers
+ * @x: first number
+ * @y: second number
+ * Return: result on success
+ */
 int sub(int x, int y)
 {
 	int result;
@@ -70,6 +85,12 @@ int sub(int x, int y)
 	return result;
 }
 
+/**
+ * mul - multiplies two numbers
+ * @x: first number
+ * @y: second number
+ * Return: result on success
+ */
 int mul(int x, int y)
 {
 	int result;
@@ -81,6 +102,12 @@ int mul(int x, int y)
 	return result;
 }
 
+/**
+ * divide - divides two numbers
+ * @x: numerator
+ * @y: denomninator
+ * Return: result on success
+ */
 double divide(double x, double y)
 {
 	double result;
