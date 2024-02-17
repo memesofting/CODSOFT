@@ -13,7 +13,6 @@ int main()
 	const short min = 0;
 
 	//time(0) is time elasped in sec from 1970
-	
 	srand(time(0));
 Here:
 	rand_num = (rand() % (max - min + 1)) + min;
@@ -21,7 +20,6 @@ Here:
 	//cout << rand_num;
 	cin >> guess;
 	//cout << endl;
-	
 	if (guess != rand_num)
 	{
 		cout << "number is: " << rand_num << endl;

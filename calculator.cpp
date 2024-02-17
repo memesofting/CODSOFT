@@ -1,5 +1,8 @@
 #include <iostream>
 #include "main.h"
+
+using namespace std;
+
 /**
  * main - entry point for simple calculator
  * takes two numbers and askes user for operation to be done
@@ -7,8 +10,6 @@
  *
  * Return: 0 on success
  */
-using namespace std;
-
 int main()
 {
 	char operation;

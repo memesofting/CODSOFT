@@ -59,9 +59,8 @@ void create_player()
     else
     {
         cout << "Invalid input!!!\nEnter 'x' or 'o'\n";
-        create_player();   
+        create_player();
     }
-    
     cout <<"player1 is : " << player1 <<endl;
     cout <<"player2 is : " << player2 <<endl;
     cout << "let the game, begin!!!\n";
@@ -78,14 +77,11 @@ void show_board_status()
     cout << "     |     |     \n";
     cout << "  "<<board[2][0]<< "  |  " << board[2][1] << "  |  " << board[2][2] << "  \n";
     cout << "     |     |     \n";
-    
-
 }
 
 void fix_mark()
 {
     int select, row, col;
-    
     show_board_status();
     //if (player1 == 'x' || player1 == 'o')
     if (player == 'x')
@@ -206,6 +202,4 @@ bool status_game()
     }
     draw = true;
     return true;
-        
 }
-    

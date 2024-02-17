@@ -1,12 +1,11 @@
 #include <iostream>
 
+using namespace std;
 /**
  * main - Entry point fir tax calculator
  *
  * Return: 0 on success
  */
-
-using namespace std;
 
 int main()
 {

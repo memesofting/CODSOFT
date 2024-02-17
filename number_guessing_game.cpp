@@ -2,13 +2,12 @@
 #include <ctime>
 #include <cstdlib>
 
+using namespace std;
 /**
  * main - generates a random number to be guessed by user
  *
  * Return: 0 on success
  */
-
-using namespace std;
 
 int main()
 {

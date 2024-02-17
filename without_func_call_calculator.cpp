@@ -1,10 +1,11 @@
 #include <iostream>
 #include "main.h"
+
+using namespace std;
 /**
- * main: entry point for simple calculator
+ * main - entry point for simple calculator
  * Return: 0 on success
  */
-using namespace std;
 
 int main()
 {
