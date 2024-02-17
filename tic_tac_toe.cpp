@@ -8,22 +8,22 @@ bool status_game();
 void show_board_status();
 void play_tictactoe();
 void play_again();
+void restore_board();
 
 char board[3][3] = {
         {'1', '2', '3'},
         {'4', '5', '6'},
         {'7', '8', '9'}
     };
-char mark;
 bool draw = false;
-char player;
+char mark;
 char player1;
 char player2;
+char reply;
 
 int main()
 {
     play_tictactoe();
-    play_again();
     return 0;
 }
 void play_tictactoe()
@@ -34,20 +34,21 @@ void play_tictactoe()
     {
         fix_mark();
     }
-    if (player == player1 && !draw)
-    {
-        show_board_status();
-        cout << "player1 wins!!!\n";
-    }
-    else if (player == player2 && !draw)
+    if (mark == player1 && !draw)
     {
         show_board_status();
         cout << "player2 wins!!!\n";
+    }
+    else if (mark == player2 && !draw)
+    {
+        show_board_status();
+        cout << "player1 wins!!!\n";
     }
     else
     {
         cout << "It's a draw!!!\n";
     }
+    play_again();
 }
 void create_player()
 {
@@ -72,6 +73,7 @@ void create_player()
     cout <<"player1 is : " << player1 <<endl;
     cout <<"player2 is : " << player2 <<endl;
     cout << "let the game, begin!!!\n";
+    mark = player1;
 }
 void show_board_status()
 {
@@ -90,43 +92,53 @@ void show_board_status()
 void fix_mark()
 {
     int select, row, col;
-    //player = player1;
     show_board_status();
-    if (player == player1)
+    cout << "i'm here\n";
+    if (mark == player1)
     {
         cout << "player1, your turn\n";
     }
-    else// if (player == player2)
+    else// if (mark == player2)
     {
         cout << "player2, your turn\n";
     }
+    //cin >> select;
     cin >> select;
+    //handle wrong type input
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore();
+        cout << "Wrong type, input mut be an integer\n Try again\n";
+            cin >> select;
+    }
     if (select < 1 || select > 9)
     {
         cout << "Invalid input!!!" << endl;
-        cout << "try again\n";
+        cout << "Enter a number between 1 and 9\n";
         fix_mark();
     }
     row = (select -1) / 3;
     col = (select -1) % 3;
 //check for empty space on board
-//fix player mark "x" or "o" if empty
+//fix mark mark "x" or "o" if empty
     if (board[row][col] != 'x' && board[row][col] != 'o')
     {
-        if (player == player1)
+        if (mark == player1)
         {
-            board[row][col] = 'x';
-            player = player2;
+            board[row][col] = mark;
+            //switch player
+            mark = player2;
         }
         else
         {
-            board[row][col] = 'o';
-            player = player1;
+            board[row][col] = mark;
+            mark = player1;
         }
     }
     else
     {
-        cout << "position is occupied\n";
+        cout << "position is occupied, try again\n";
         fix_mark();
     }
 }
@@ -165,12 +177,13 @@ bool status_game()
 
 void play_again()
 {
-    char reply;
     cout << "Would you like to play again :)\n";
+    cout << "Enter y or n\n";
     cin >> reply;
     if (reply == 'y')
     {
-        play_tictactoe();
+        restore_board();
+        main();
     }
     else if (reply == 'n')
     {
@@ -180,6 +193,19 @@ void play_again()
     {
         cout << "Invalid Input!!!\n" << "Enter y or n\n";
         play_again();
+    }
+}
+
+void restore_board()
+{
+    cout << "let us restore board\n";
+    char num = '1';
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+        {
+            board[i][j] = num++;
+        }
     }
 }
     
